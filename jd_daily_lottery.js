@@ -20,7 +20,7 @@ cron "13 1,22,23 * * *" script-path=https://jdsharedresourcescdn.azureedge.net/j
 每日抽奖 = type=cron,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_daily_lottery.js, cronexpr="13 1,22,23 * * *", timeout=3600, enable=true
 */
 console.log("start ===============================")
-const $ = new Env('每日抽奖');
+const $ = new Env('daily_lottery');
 console.log("1 =======================")
 const notify = $.isNode() ? require('./sendNotify') : '';
 console.log("2 =======================")
