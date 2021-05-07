@@ -19,11 +19,13 @@ cron "13 1,22,23 * * *" script-path=https://jdsharedresourcescdn.azureedge.net/j
 ============小火箭=========
 每日抽奖 = type=cron,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_daily_lottery.js, cronexpr="13 1,22,23 * * *", timeout=3600, enable=true
 */
+console.log("start ===============================")
 const $ = new Env('每日抽奖');
 const notify = $.isNode() ? require('./sendNotify') : '';
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const activityCode = '1386931424925319168';
 $.helpCodeList = [];
+console.log("second =====================")
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [], cookie = '';
 if ($.isNode()) {
