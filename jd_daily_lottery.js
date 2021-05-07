@@ -21,8 +21,11 @@ cron "13 1,22,23 * * *" script-path=https://jdsharedresourcescdn.azureedge.net/j
 */
 console.log("start ===============================")
 const $ = new Env('每日抽奖');
+console.log("1 =======================")
 const notify = $.isNode() ? require('./sendNotify') : '';
+console.log("2 =======================")
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
+console.log("3 =======================")
 const activityCode = '1386931424925319168';
 $.helpCodeList = [];
 console.log("second =====================")
