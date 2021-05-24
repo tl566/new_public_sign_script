@@ -18,9 +18,12 @@ cron "1 0,11,21 * * *" script-path=https://jdsharedresourcescdn.azureedge.net/jd
 ====================================小火箭=============================
 跳跳乐瓜分京豆 = type=cron,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jump.js, cronexpr="1 0,11,21 * * *", timeout=3600, enable=true
 */
+console.log("start ====================")
 const $ = new Env('跳跳乐瓜分京豆');
+console.log("create env ===========================")
 const notify = $.isNode() ? require('./sendNotify') : '';
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
+console.log("jdCookieNode: ",jdCookieNode)
 // $.helpCodeList = [];
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [], cookie = '';
